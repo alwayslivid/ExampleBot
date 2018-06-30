@@ -7,7 +7,7 @@ Developed with <3 and for the sake of doing so by AlwaysLivid.
 if __name__ != "__main__":
 	# Basic Bot Configuration
 	prefix = "m!" # DEFAULT VALUE: "m!"
-	description = "An e-mail sending bot."
+	description = "Example bot."
 	debug_mode = True # DEFAULT VALUE: True
 	statuses = ['doing chores.', 'eating vegetables.', 'drinking water.']
 	debug_status = ["DEBUG MODE ON"]

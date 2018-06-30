@@ -10,7 +10,6 @@ try:
     import discord # I don't think that I have to explain this one.
     from discord.ext import commands # I don't think that I have to explain this one either.
     import logging # Module necessary, for well, uh, logging. 
-    import smtplib
     import config, private # Modules necessary for the initialization of the bot.
 except (AttributeError, ImportError):
     try:
