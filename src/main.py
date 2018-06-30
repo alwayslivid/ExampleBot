@@ -10,6 +10,7 @@ try:
     import discord # I don't think that I have to explain this one.
     from discord.ext import commands # I don't think that I have to explain this one either.
     import logging # Module necessary, for well, uh, logging. 
+    import random
     import config, private # Modules necessary for the initialization of the bot.
 except (AttributeError, ImportError):
     try:
@@ -45,7 +46,7 @@ async def on_ready():
     await CogLoader()
     if config.debug_mode == True:
         activity = config.debug_status
-        await bot.change.presence(activity=discord.Game(name=activity))
+        await bot.change_presence(activity=discord.Game(name=activity))
     elif config.debug_mode == False:
         activity = random.choice(config.statuses)
         await bot.change_presence(activity=discord.Game(name=activity))

@@ -98,7 +98,7 @@ class Owner:
 				self.bot.load_extension(file)
 				logging.critical("Reloaded {}!".format(file))
 			logging.critical("Reloaded!")
-			embed.add_field(title="\u200B", value="Operation Succeeded!", inline=False)
+			embed.add_field(name="SUCCESS!", value="Operation Succeeded!", inline=False)
 			await ctx.send(embed=embed)
 		except:
 			embed.add_field(name="FAILURE!", value="Operation Failed!", inline=False)
