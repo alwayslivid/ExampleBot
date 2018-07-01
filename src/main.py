@@ -14,7 +14,7 @@ try:
     import config, private # Modules necessary for the initialization of the bot.
 except (AttributeError, ImportError):
     try:
-        import logging # At this point my program prays that the user has the logging module installed and warns him accordingly.
+        import logging # At this point my program prays that the user has the logging module installed and warns them accordingly.
         logging.basicConfig(level=logging.DEBUG)
         logging.critical("Failed to load some modules, exiting in 5 seconds.")
     except (AttributeError, ImportError):
