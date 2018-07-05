@@ -4,14 +4,14 @@ Developed with <3 and for the sake of doing so by AlwaysLivid.
 @author: AlwaysLivid
 '''
 
-# IMPORTATION OF MODULES
+# MODULE IMPORTATION
 
 try:
     import discord # I don't think that I have to explain this one.
     from discord.ext import commands # I don't think that I have to explain this one either.
-    import logging # Module necessary, for well, uh, logging. 
-    import random
-    import config, private # Modules necessary for the initialization of the bot.
+    import logging # The module necessary, for well, uh, logging. 
+    import random # The module's necessary for random statuses.
+    import config, private # Modules which are necessary for the initialization of the bot.
 except (AttributeError, ImportError):
     try:
         import logging # At this point my program prays that the user has the logging module installed and warns them accordingly.
@@ -50,8 +50,9 @@ async def on_ready():
     elif config.debug_mode == False:
         activity = random.choice(config.statuses)
         await bot.change_presence(activity=discord.Game(name=activity))
-        
+
 def main():
+
     if config.debug_mode == True:
         logging.basicConfig(level=logging.DEBUG)
     else:
