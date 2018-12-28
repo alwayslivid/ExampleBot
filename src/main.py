@@ -5,20 +5,16 @@ Developed with <3 and for the sake of doing so by AlwaysLivid.
 '''
 
 try:
-    import discord # I don't think that I have to explain this one.
-    from discord.ext import commands # I don't think that I have to explain this one either.
-    import logging # The module necessary, for well, uh, logging. 
-    import random # The module's necessary for random statuses.
-    import config, private # Modules which are necessary for the initialization of the bot.
+    import discord
+    from discord.ext import commands
+    import logging
+    import random
+    import config, private
 except (AttributeError, ImportError):
     try:
-        import logging # At this point my program prays that the user has the logging module installed and warns them accordingly.
-        logging.basicConfig(level=logging.DEBUG)
-        logging.critical("Failed to load some modules, exiting in 5 seconds.")
-    except (AttributeError, ImportError):
-        # Just in case the user *somehow* doesn't have the logging module installed.
-        print("Failed to import some libs, exiting in 5 seconds.")
-    import time # I've spent way too much time in this part, so I won't even have my program check whether the user has the 'time' module.
+    import logging, time
+    logging.basicConfig(level=logging.DEBUG)
+    logging.critical("Failed to load some modules, exiting in 5 seconds.")
     time.sleep(5)
     exit()
 
