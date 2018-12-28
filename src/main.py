@@ -4,8 +4,6 @@ Developed with <3 and for the sake of doing so by AlwaysLivid.
 @author: AlwaysLivid
 '''
 
-# MODULE IMPORTATION
-
 try:
     import discord # I don't think that I have to explain this one.
     from discord.ext import commands # I don't think that I have to explain this one either.
@@ -23,8 +21,6 @@ except (AttributeError, ImportError):
     import time # I've spent way too much time in this part, so I won't even have my program check whether the user has the 'time' module.
     time.sleep(5)
     exit()
-
-# FUNCTION DEFINITION
 
 bot = commands.Bot(command_prefix=config.prefix, description=config.description)
 
