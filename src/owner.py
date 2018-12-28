@@ -13,7 +13,6 @@ import logging
 import config
 
 class Owner:
-
 	def __init__(self, bot):
 		self.bot = bot
 
@@ -37,17 +36,13 @@ class Owner:
 	@commands.is_owner()
 	async def cogmgmt(self, ctx, load: str, file: str):
 		# Syntax: "m!manualcogloader <enable/disable> <cogname>"
-
 		class OperationError(Exception):
 			pass
-
 		logging.info("Cogmgmt command issued by {} (ID: {}).".format(ctx.author, str(ctx.author.id)))
 		load = load.lower()
-
 		embed = discord.Embed(title="Cog Management", color=config.admin_color)
 		embed.set_author(icon_url=ctx.author.avatar_url, name=str(ctx.author))
 		logging.info("Cogmgmt command issued by {}.".format(ctx.author))
-
 		try:
 			if load == "enable":
 				try:
