@@ -52,7 +52,6 @@ async def on_ready():
         await bot.change_presence(activity=discord.Game(name=activity))
 
 def main():
-
     if config.debug_mode == True:
         logging.basicConfig(level=logging.DEBUG)
     else:
